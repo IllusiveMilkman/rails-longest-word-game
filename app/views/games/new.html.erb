@@ -1,0 +1,33 @@
+<div class="container">
+  <h1 style="padding: 50px;">Find the longest word</h1>
+  <!-- <p>Find me in app/views/games/new.html.erb</p> -->
+  <!-- <p><%= @letters %></p> -->
+  <ul class="flex-container">
+    <% @letters.each do |character| %>
+        <li class="flex-item"><%= character %></li>
+      <% end %>
+  </ul>
+
+  <hr>
+
+  <form action="/score" method="post">
+    <div class="form-row align-items-center">
+
+      <div class="col-sm-6 my-1">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <%= hidden_field_tag :letters_array, @letters %>
+        <% start_time = Time.now %>
+        <%= hidden_field_tag :start_time, start_time %>
+        <label class="sr-only" for="wordInput">Question</label>
+        <input type="text" name='wordGuess' class="form-control" id="wordInput" placeholder="Type longest word here">
+        <!-- We need the 'name' attribute otherwise we can't send params -->
+      </div>
+
+      <div class="col-auto my-1">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+    </div>
+  </form>
+
+</div>

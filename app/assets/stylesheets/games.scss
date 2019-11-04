@@ -1,0 +1,24 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+
+.flex-item {
+  background: tomato;
+  width: 80px;
+  height: 80px;
+  box-shadow: 5px 5px 10px;
+  list-style-type: none;
+
+  line-height: 80px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}

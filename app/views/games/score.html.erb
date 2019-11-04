@@ -1,0 +1,7 @@
+<h1>Result</h1>
+<!-- <p>Find me in app/views/games/score.html.erb</p> -->
+<p>Your Socre: <%= @score_calc %></p>
+<p>Letters provided: <%= @letters_array.join(' ') %></p>
+<p>Your guess: <%= @guess %></p>
+<p>Message: <%= @message_result %></p>
+<%= link_to "Play again", new_path %>
